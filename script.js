@@ -1,54 +1,72 @@
 // Demo products: replace these sample products, prices and images with your live inventory.
+
 const products = [
   {
     id: 101,
     name: "The Form Tote",
     cat: "Accessories",
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=85",
+    price: 1499,
+    tag: "Best Seller"
   },
   {
     id: 102,
     name: "The Essential Shirt",
     cat: "Apparel",
-    image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=900&q=85",
+    price: 1899,
+    tag: "New Arrival"
   },
   {
     id: 103,
     name: "Modern Timepiece",
     cat: "Accessories",
-    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=900&q=85",
+    price: 2499,
+    tag: "Trending"
   },
   {
     id: 104,
     name: "Sculpted Home Set",
     cat: "Lifestyle",
-    image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=900&q=85",
+    price: 1999,
+    tag: "Editor's Pick"
   },
   {
     id: 105,
     name: "The Layer Jacket",
     cat: "Apparel",
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&q=85",
+    price: 3299,
+    tag: "Premium"
   },
   {
     id: 106,
     name: "Everyday Crossbody",
     cat: "Accessories",
-    image: "https://images.unsplash.com/photo-1590870029862-74c6f4f0e5c1?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1590870029862-74c6f4f0e5c1?w=900&q=85",
+    price: 1799,
+    tag: "Best Seller"
   },
   {
     id: 107,
     name: "Soft Form Cushion",
     cat: "Lifestyle",
-    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=900&q=85",
+    price: 999,
+    tag: "New Arrival"
   },
   {
     id: 108,
     name: "Weekend Edit",
     cat: "Apparel",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=85"
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=85",
+    price: 2799,
+    tag: "Limited Edition"
   }
 ];
+
 let cart=JSON.parse(localStorage.getItem("nextA_cart")||"[]"),category="All",detailSelection={};
 const $=id=>document.getElementById(id),money=n=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
 function renderProducts(){
