@@ -1,13 +1,54 @@
 // Demo products: replace these sample products, prices and images with your live inventory.
 const products=[
-{id:101,name:"The Form Tote",cat:"Accessories",price:2199,tag:"BESTSELLER",image:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=85",desc:"A considered everyday carry with a clean silhouette, generous space and refined finishing.",sizes:["One Size"],colors:[{name:"Espresso",hex:"#49352b"},{name:"Sand",hex:"#c9b99a"},{name:"Black",hex:"#171717"}]},
-{id:102,name:"The Essential Shirt",cat:"Apparel",price:1699,tag:"NEW ARRIVAL",image:"https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=900&q=85",desc:"An easy, versatile wardrobe staple with a relaxed fit and timeless proportions.",sizes:["S","M","L","XL"],colors:[{name:"Ivory",hex:"#e9e1d0"},{name:"Blue",hex:"#78899b"},{name:"Black",hex:"#222"}]},
-{id:103,name:"Modern Timepiece",cat:"Accessories",price:3499,tag:"THE EDIT",image:"https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=900&q=85",desc:"A minimal timepiece designed to complement both everyday and occasion dressing.",sizes:["One Size"],colors:[{name:"Gold",hex:"#c5a15b"},{name:"Silver",hex:"#c4c8cb"}]},
-{id:104,name:"Sculpted Home Set",cat:"Lifestyle",price:1299,tag:"LIMITED",image:"https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=900&q=85",desc:"A tactile home accent set that brings a calm, considered finish to your space.",sizes:["One Size"],colors:[{name:"Natural",hex:"#c7b99e"},{name:"Stone",hex:"#85817a"}]},
-{id:105,name:"The Layer Jacket",cat:"Apparel",price:3299,tag:"EDITOR'S PICK",image:"https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&q=85",desc:"A confident layering piece with a clean profile and effortless everyday character.",sizes:["S","M","L","XL"],colors:[{name:"Tan",hex:"#9a7051"},{name:"Black",hex:"#1e1e1e"}]},
-{id:106,name:"Everyday Crossbody",cat:"Accessories",price:1899,tag:"POPULAR",image:"https://images.unsplash.com/photo-1590870029862-74c6f4f0e5c1?w=900&q=85",desc:"Compact, functional and easy to style — made to keep essentials close at hand.",sizes:["One Size"],colors:[{name:"Cocoa",hex:"#634838"},{name:"Black",hex:"#171717"}]},
-{id:107,name:"Soft Form Cushion",cat:"Lifestyle",price:999,tag:"NEW",image:"https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=900&q=85",desc:"A soft finishing touch for a thoughtful, comfortable living space.",sizes:["One Size"],colors:[{name:"Oat",hex:"#c8bca8"},{name:"Olive",hex:"#77775b"}]},
-{id:108,name:"Weekend Edit",cat:"Apparel",price:2799,tag:"JUST IN",image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=85",desc:"A versatile outfit edit for unhurried days and spontaneous plans.",sizes:["S","M","L","XL"],colors:[{name:"Neutral",hex:"#b5a58c"},{name:"Charcoal",hex:"#46464a"}]}
+const products = [
+  {
+    id: 101,
+    name: "The Form Tote",
+    cat: "Accessories",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=85"
+  },
+  {
+    id: 102,
+    name: "The Essential Shirt",
+    cat: "Apparel",
+    image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=900&q=85"
+  },
+  {
+    id: 103,
+    name: "Modern Timepiece",
+    cat: "Accessories",
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=900&q=85"
+  },
+  {
+    id: 104,
+    name: "Sculpted Home Set",
+    cat: "Lifestyle",
+    image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=900&q=85"
+  },
+  {
+    id: 105,
+    name: "The Layer Jacket",
+    cat: "Apparel",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&q=85"
+  },
+  {
+    id: 106,
+    name: "Everyday Crossbody",
+    cat: "Accessories",
+    image: "https://images.unsplash.com/photo-1590870029862-74c6f4f0e5c1?w=900&q=85"
+  },
+  {
+    id: 107,
+    name: "Soft Form Cushion",
+    cat: "Lifestyle",
+    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=900&q=85"
+  },
+  {
+    id: 108,
+    name: "Weekend Edit",
+    cat: "Apparel",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=85"
+  }
 ];
 let cart=JSON.parse(localStorage.getItem("nextA_cart")||"[]"),category="All",detailSelection={};
 const $=id=>document.getElementById(id),money=n=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
