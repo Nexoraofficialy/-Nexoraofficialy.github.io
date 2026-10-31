@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#481522">
+  <meta name="description" content="Discover premium Indian ethnic wear at NEXT A COLLECTION. Shop Anarkali suits, lehengas, sarees and festive collections.">
+  <title>NEXT A COLLECTION | Premium Ethnic Wear</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    ✨ WELCOME TO NEXT A COLLECTION — ELEGANCE REDEFINED ✨
+  </div>
+
+  <header class="header">
+    <a href="#home" class="logo">
+      <span>N</span>
+      <div>NEXT A <small>COLLECTION</small></div>
+    </a>
+
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#bestsellers">Best Sellers</a>
+      <a href="#shop">Shop All</a>
+      <a href="#newarrivals">New Arrivals</a>
+      <div class="dropdown">
+        <a href="#categories">Shop by Category ▾</a>
+        <div class="dropdown-menu">
+          <a href="#categories" data-category-link="Anarkali Suit Sets">Anarkali Suit Sets</a>
+          <a href="#categories" data-category-link="Lehenga Chunri">Lehenga Chunri</a>
+          <a href="#categories" data-category-link="Sarees">Sarees</a>
+          <a href="#categories" data-category-link="Sharara">Sharara</a>
+          <a href="#categories" data-category-link="Festival Sale">Festival Sale</a>
+          <a href="#categories" data-category-link="Navratri Collection">Navratri Collection</a>
+        </div>
+      </div>
+      <a href="#offers">Sale Offers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="bag-button" id="openCart">
+      BAG <span id="bagCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">THE FESTIVE COLLECTION / 2026</p>
+        <h1>Tradition in every thread.<br><i>Elegance in every look.</i></h1>
+        <p>Discover beautiful ethnic wear designed to make every celebration unforgettable.</p>
+        <a href="#shop" class="gold-button">EXPLORE COLLECTION ↗</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&q=85"
+          alt="Indian ethnic fashion collection">
+        <div class="hero-label">CELEBRATE YOUR STYLE</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>✦ Premium Collections</div>
+      <div>✦ Elegant Designs</div>
+      <div>✦ Secure Shopping</div>
+      <div>✦ Customer Support</div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE OUR WORLD</p>
+        <h2>Shop by Category</h2>
+        <p>Find the perfect outfit for every special occasion.</p>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card" href="#shop" data-category-link="Anarkali Suit Sets">
+          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e3?w=700&q=85" alt="Anarkali suits">
+          <span>Anarkali Suit Sets</span>
+        </a>
+        <a class="category-card" href="#shop" data-category-link="Lehenga Chunri">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=700&q=85" alt="Lehenga collection">
+          <span>Lehenga Chunri</span>
+        </a>
+        <a class="category-card" href="#shop" data-category-link="Sarees">
+          <img src="https://images.unsplash.com/photo-1610189012906-4c4d5e4b9d85?w=700&q=85" alt="Saree collection">
+          <span>Sarees</span>
+        </a>
+        <a class="category-card" href="#shop" data-category-link="Sharara">
+          <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=700&q=85" alt="Sharara collection">
+          <span>Sharara Sets</span>
+        </a>
+        <a class="category-card" href="#offers" data-category-link="Festival Sale">
+          <img src="https://images.unsplash.com/photo-1609741199906-3b2a9c6a4d90?w=700&q=85" alt="Festive fashion">
+          <span>Festival Sale</span>
+        </a>
+        <a class="category-card" href="#shop" data-category-link="Navratri Collection">
+          <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?w=700&q=85" alt="Navratri outfits">
+          <span>Navratri Collection</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="offer-banner" id="offers">
+      <p class="eyebrow">SPECIAL FESTIVE EDIT</p>
+      <h2>Make Every Occasion Beautiful</h2>
+      <p>Explore our selected festive styles and discover your next favourite look.</p>
+      <a href="#shop" class="gold-button">SHOP THE COLLECTION ↗</a>
+    </section>
+
+    <section class="section products-section" id="bestsellers">
+      <div class="section-heading">
+        <p class="eyebrow">CUSTOMER FAVOURITES</p>
+        <h2>Best Sellers</h2>
+        <p>Discover the styles everyone is loving.</p>
+      </div>
+      <div class="product-grid" id="bestSellerGrid"></div>
+    </section>
+
+    <section class="section products-section" id="newarrivals">
+      <div class="section-heading">
+        <p class="eyebrow">FRESH FROM OUR COLLECTION</p>
+        <h2>New Arrivals</h2>
+        <p>New looks for your next celebration.</p>
+      </div>
+      <div class="product-grid" id="newArrivalGrid"></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <p class="eyebrow">THE COMPLETE EDIT</p>
+        <h2>Shop All Products</h2>
+        <p>Explore our complete ethnic wear collection.</p>
+      </div>
+
+      <div class="shop-controls">
+        <div class="filters" id="filters">
+          <button class="filter active" data-cat="All">All</button>
+          <button class="filter" data-cat="Anarkali Suit Sets">Anarkali</button>
+          <button class="filter" data-cat="Lehenga Chunri">Lehenga</button>
+          <button class="filter" data-cat="Sarees">Sarees</button>
+          <button class="filter" data-cat="Sharara">Sharara</button>
+          <button class="filter" data-cat="Navratri Collection">Navratri</button>
+        </div>
+        <input id="search" type="search" placeholder="Search products...">
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="story">
+      <p class="eyebrow">OUR PHILOSOPHY</p>
+      <h2>Where Tradition Meets <i>Timeless Beauty.</i></h2>
+      <p>At NEXT A COLLECTION, we celebrate the beauty of Indian traditions through elegant ethnic fashion. Discover styles that bring confidence, grace and individuality to every occasion.</p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">WE ARE HERE TO HELP</p>
+      <h2>Let's Connect</h2>
+      <p>Have questions about products, sizes or orders? Our team is ready to assist you.</p>
+      <a href="https://wa.me/918949561691?text=Hello%2C%20I%20need%20help%20with%20NEXT%20A%20COLLECTION."
+         target="_blank" rel="noopener noreferrer" class="gold-button">
+        CONTACT US ON WHATSAPP ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">NEXT A COLLECTION</div>
+    <p>Elegance • Tradition • Timeless Style</p>
+    <p>© <span id="year"></span> NEXT A COLLECTION. All Rights Reserved.</p>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/918949561691?text=Hello%2C%20I%20am%20interested%20in%20your%20collection."
+     target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <span>✆</span><small>Chat with us</small>
+  </a>
+
+  <div class="shade" id="shade"></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="panel-head">
+      <h2>Your Shopping Bag</h2>
+      <button id="closeCart" class="close-button" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartList" class="cart-list"></div>
+    <div class="cart-summary">
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <strong id="subtotal">₹0</strong>
+      </div>
+      <p>Shipping charges are calculated separately.</p>
+      <button class="gold-button checkout" id="checkout">ORDER ON WHATSAPP ↗</button>
+    </div>
+  </aside>
+
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <button id="closeModal" class="modal-close" aria-label="Close product">×</button>
+    <div id="modalContent"></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
