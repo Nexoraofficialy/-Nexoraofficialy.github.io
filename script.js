@@ -1,5 +1,4 @@
 // Demo products: replace these sample products, prices and images with your live inventory.
-const products=[
 const products = [
   {
     id: 101,
